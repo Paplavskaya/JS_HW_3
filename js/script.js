@@ -13,6 +13,15 @@ for(let i = 35; i >= 8; i--){
 
 let i = 89;
 while(i >=11){
-    document.write(`${i}<br>`)
-    i--
+    document.write(`${i}<br>`);
+    i--;
 }
+
+// С помощью цикла найдите сумму чисел от 0 до 100.
+
+let sum = 0;
+for(let i = 1; i <= 100; i = i + 1){
+    sum = sum + i;
+}
+console.log(sum);
+
