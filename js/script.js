@@ -110,3 +110,30 @@ for(;;){
 console.log(`Сумма чисел: ${s}`);
 console.log(`Среднее арифметическое: ${s/q}`)
 
+/*Дано произвольное целое число n. Написать программу, которая:
+a. разбивает число n на цифры и выводит их на экран;
+b. подсчитывает сколько цифр в числе n;
+c. находит сумму цифр числа n;
+d. меняет порядок цифр числа n на обратный.*/
+
+let n1 = 12345;
+let nQuantity = 0;
+let sum1 = 0;
+let nStr = `${n1}`
+let bStr = ''
+
+for(let i = 0; i < nStr.length; i++){
+    console.log(nStr[i]);
+}
+
+while(n1 >= 1) {
+    let b = n1 % 10;
+    n1 = (n1 - b) / 10;
+    sum1 += b;
+    nQuantity++
+    bStr += `${b}`  
+}
+
+console.log(`цифр в числе: ${nQuantity}`)
+console.log(`сумма: ${sum1}`)
+console.log(`обратный порядок: ${bStr}`)
