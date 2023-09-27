@@ -89,26 +89,26 @@ console.log(num);
 число, то вывести сообщение об ошибке ввода. При подсчете учесть, что пользователь 
 может ввести отрицательное значение.*/
 
-// let s = 0;
-// let q = 0;
+let s = 0;
+let q = 0;
 
-// for(;;){
-//     let number = +prompt('введите число');
+for(;;){
+    let number = +prompt('введите число');
 
-//     if(isNaN(number)){
-//         alert('Ошибка! Ввели не число');
-//         continue;
-//     }
+    if(isNaN(number)){
+        alert('Ошибка! Ввели не число');
+        continue;
+    }
 
-//     if(number === 0 || number === null){        
-//         break;
-//     }
-//     q = q + 1;
-//     s = s + number;
-// }
+    if(number === 0 || number === null){        
+        break;
+    }
+    q = q + 1;
+    s = s + number;
+}
 
-// console.log(`Сумма чисел: ${s}`);
-// console.log(`Среднее арифметическое: ${s/q}`)
+console.log(`Сумма чисел: ${s}`);
+console.log(`Среднее арифметическое: ${s/q}`)
 
 /*Дано произвольное целое число n. Написать программу, которая:
 a. разбивает число n на цифры и выводит их на экран;
@@ -143,4 +143,25 @@ console.log(`обратный порядок: ${bStr}`)
 
 let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57';
 
-// не смогла разобраться, предлагаю разобрать на занятиях)))
+let numberStr = '';
+let min = 99999999;
+let max = 0;
+
+for(let i = 0; i < str.length; i=i+1){
+    if(str[i] === ' '){
+        if (+numberStr > max){
+            max = +numberStr;
+        }
+        if (+numberStr < min){
+            min = +numberStr;
+        }
+        numberStr = '';
+        continue;
+    }
+
+    if(!isNaN(+str[i])){
+        numberStr = numberStr + str[i];
+    }
+}
+console.log(`максимальное число: ${max}`);
+console.log(`минимальное число: ${min}`);
