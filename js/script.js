@@ -35,3 +35,20 @@ for(let i = 1; i <= 5; i++){
     }
     console.log(sum);
 }
+
+// Выведите чётные числа от 8 до 56. Решить задание через while и for.
+
+for(let i = 8; i <= 56; i++){
+    if(i % 2 === 0){
+        console.log(i);
+    }
+}
+
+let a = 8;
+while(a <= 56){
+    if(a % 2 === 0){
+        console.log(a);
+    }
+    a++
+}
+
